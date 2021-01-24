@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Тимофей  Быстров](https://up.htmlacademy.ru/htmlcss/30/user/1648231).
-* Наставник: `Неизвестно`.
+* Наставник: [Виктор Кан](https://htmlacademy.ru/profile/viktorkan).
 
 ---
 
