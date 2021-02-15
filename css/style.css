@@ -1,0 +1,202 @@
+/* Fonts */
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+       url("../fonts/PTSans.woff") format("woff");
+       font-weight: 400;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+       url("../fonts/PTSans-Bold.woff") format("woff");
+       font-weight: 700;
+       font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-light-gray: #F2F2F2;
+  --basic-gray: #EBEBEB;
+  --basic-sky-blue: #81b3d2;
+  --basic-sky-blue-1: #81B3D3;
+  --basic-blue:  #669EC0;
+  --basic-dark-blue: #5496BD;
+  --basic-dark: #333333;
+  --basic-light-brown: #766357;
+  --basic-brown: #604E43;
+  --basic-dark-brown:  #503E33;
+  --basic-neutral: #eeeeee;
+}
+
+/* Global */
+
+.main-body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  font-style: normal;
+  color:#000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+}
+
+/* Main-Header */
+
+.site-nav {
+  list-style: none;
+}
+
+.site-nav a:hover {
+  color: #81b3d2;
+}
+.site-nav a:active {
+  color: #eeeeee;
+}
+
+
+.main-header a {
+  color:black;
+}
+
+/* Main */
+
+.container h1 {
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 14px;
+  line-height: 26px;
+  color: #333333;
+  text-align: center;
+}
+
+/* Advantages */
+
+.advantages-list {
+  background-color: #81B3D3;
+  color:#ffffff;
+}
+
+.advantages h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+.advantages p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+.advantages ul  {
+  list-style: none;
+}
+.advantages h4 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.advantages-item p{
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+}
+.advantages-item {
+  text-align: center;
+}
+
+/* Features */
+
+.features {
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.features h4 {
+  font-size: 21px;
+  line-height: 21px;
+}
+.features p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333
+}
+
+/* Appointment */
+
+.appointment-info h2 {
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+}
+.appointment-info p {
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.appointment h2 {
+  background-color: #766357;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+}
+.appointment h2:hover {
+  background-color: #604E43;
+}
+.appointment h2:active {
+  background-color: #503E33;
+}
+
+.button {
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+}
+.button:hover {
+  background-color: #669EC0;
+}
+.button:active {
+  background-color: #5496BD;
+}
+
+.appointment-date input:hover {
+  background-color: #EBEBEB;
+}
+.appointment-date input:focus{
+  background-color: #FFFFFF;
+  border: 2px solid #E5E5E5;
+}
+
+
+/* Main-Footer */
+
+.contact {
+  font-size: 21px;
+  line-height: 26px;
+}
+.contact a {
+  color:black;
+}
+.contact p {
+  color:black;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.footer-copyright a {
+  color: #000000;
+}
