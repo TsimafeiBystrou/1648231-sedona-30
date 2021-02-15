@@ -63,6 +63,7 @@
 
 .main-header a {
   color:black;
+  text-decoration: none;
 }
 
 /* Main */
@@ -138,6 +139,7 @@
   font-size: 30px;
   line-height: 24px;
   text-align: center;
+  color: #000000;
 }
 .appointment-info p {
   font-size: 30px;
@@ -188,9 +190,11 @@
 }
 .contact a {
   color:black;
+  text-decoration: none;
 }
 .contact p {
   color:black;
+  text-decoration: none;
 }
 
 .footer-social ul {
@@ -199,4 +203,80 @@
 
 .footer-copyright a {
   color: #000000;
+}
+
+/* Main-Catalog */
+
+.search {
+  text-align: center;
+}
+
+.search-result {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sorting {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting li {
+  list-style: none;
+}
+.sorting a{
+  color: #000000;
+}
+
+.hotels h2 {
+  font-size: 21px;
+  line-height: 26px;
+  text-align: left;
+}
+
+.hotels h2:hover {
+  color: #81B3D2;;
+}
+.hotels h2:active {
+  color: #000000;;
+}
+
+.hotel-info {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+}
+
+.link-show {
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #81b3d2;
+  color: white;
+  text-decoration: none;
+}
+.link-show:hover {
+  background-color: #669EC0;
+}
+.link-show:active {
+  background-color: #5496BD;
+}
+
+.link-order {
+  font-size: 14px;
+  line-height: 21px;
+  background-color: #766357;
+  color: white;
+  text-decoration: none;
+}
+.link-order:hover {
+  background-color: #604E43;
+}
+.link-order:active {
+  background-color: #503E33;
+}
+
+.rating {
+  background-color: #f2f2f2;
 }
