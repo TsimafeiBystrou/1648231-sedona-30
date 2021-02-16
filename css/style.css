@@ -42,9 +42,9 @@
   line-height: 26px;
   font-weight: bold;
   font-style: normal;
-  color:#000000;
+  color: var(--basic-black);
   text-transform: uppercase;
-  background-color: #ffffff;
+  background-color: var(--basic-white);
 }
 
 /* Main-Header */
@@ -54,15 +54,15 @@
 }
 
 .site-nav a:hover {
-  color: #81b3d2;
+  color: var(--basic-sky-blue);
 }
 .site-nav a:active {
-  color: #eeeeee;
+  color: var(--basic-neutral);
 }
 
 
 .main-header a {
-  color:black;
+  color: var(--basic-black);
   text-decoration: none;
 }
 
@@ -77,15 +77,15 @@
 .container h2 {
   font-size: 14px;
   line-height: 26px;
-  color: #333333;
+  color: var(--basic-dark);
   text-align: center;
 }
 
 /* Advantages */
 
 .advantages-list {
-  background-color: #81B3D3;
-  color:#ffffff;
+  background-color: var(--basic-sky-blue-1);
+  color: var(--basic-white)
 }
 
 .advantages h3 {
@@ -109,7 +109,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  color: #333333;
+  color: var(--basic-dark);
 }
 .advantages-item {
   text-align: center;
@@ -118,7 +118,7 @@
 /* Features */
 
 .features {
-  background-color: #eeeeee;
+  background-color: var(--basic-neutral);
   text-align: center;
 }
 
@@ -130,7 +130,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  color: #333333
+  color: var(--basic-dark);
 }
 
 /* Appointment */
@@ -139,7 +139,7 @@
   font-size: 30px;
   line-height: 24px;
   text-align: center;
-  color: #000000;
+  color: var(--basic-black);
 }
 .appointment-info p {
   font-size: 30px;
@@ -148,37 +148,37 @@
 }
 
 .appointment h2 {
-  background-color: #766357;
-  color: #ffffff;
+  background-color: var(--basic-light-brown);
+  color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
 }
 .appointment h2:hover {
-  background-color: #604E43;
+  background-color: var(--basic-brown);
 }
 .appointment h2:active {
-  background-color: #503E33;
+  background-color: var(--basic-dark-brown);
 }
 
 .button {
-  background-color: #81b3d2;
-  color: #ffffff;
+  background-color: var(--basic-sky-blue);
+  color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
 }
 .button:hover {
-  background-color: #669EC0;
+  background-color: var(--basic-blue);
 }
 .button:active {
-  background-color: #5496BD;
+  background-color: var(--basic-dark-blue);
 }
 
 .appointment-date input:hover {
-  background-color: #EBEBEB;
+  background-color: var(--basic-gray);
 }
 .appointment-date input:focus{
-  background-color: #FFFFFF;
-  border: 2px solid #E5E5E5;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-gray);
 }
 
 
@@ -189,11 +189,11 @@
   line-height: 26px;
 }
 .contact a {
-  color:black;
+  color: var(--basic-black);
   text-decoration: none;
 }
 .contact p {
-  color:black;
+  color: var(--basic-black);
   text-decoration: none;
 }
 
@@ -202,7 +202,13 @@
 }
 
 .footer-copyright a {
-  color: #000000;
+  color: var(--basic-black);
+}
+
+/* Catalog-Header */
+
+.nav-current {
+  color: var(--basic-light-brown);
 }
 
 /* Main-Catalog */
@@ -226,7 +232,7 @@
   list-style: none;
 }
 .sorting a{
-  color: #000000;
+  color: var(--basic-black);
 }
 
 .hotels h2 {
@@ -236,10 +242,10 @@
 }
 
 .hotels h2:hover {
-  color: #81B3D2;;
+  color: var(--basic-sky-blue);
 }
 .hotels h2:active {
-  color: #000000;;
+  color: var(--basic-black);
 }
 
 .hotel-info {
@@ -252,31 +258,31 @@
 .link-show {
   font-size: 14px;
   line-height: 21px;
-  background-color: #81b3d2;
-  color: white;
+  background-color:  var(--basic-sky-blue);
+  color: var(--basic-white);
   text-decoration: none;
 }
 .link-show:hover {
-  background-color: #669EC0;
+  background-color: var(--basic-blue);
 }
 .link-show:active {
-  background-color: #5496BD;
+  background-color: var(--basic-dark-blue);
 }
 
 .link-order {
   font-size: 14px;
   line-height: 21px;
-  background-color: #766357;
-  color: white;
+  background-color: var(--basic-light-brown);
+  color: var(--basic-white);
   text-decoration: none;
 }
 .link-order:hover {
-  background-color: #604E43;
+  background-color: var(--basic-brown);
 }
 .link-order:active {
-  background-color: #503E33;
+  background-color: var(--basic-dark-brown);
 }
 
 .rating {
-  background-color: #f2f2f2;
+  background-color: var(--basic-light-gray);
 }
