@@ -45,12 +45,18 @@
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-white);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 /* Main-Header */
 
 .site-nav {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .site-nav a:hover {
@@ -60,13 +66,19 @@
   color: var(--basic-neutral);
 }
 
-
 .main-header a {
   color: var(--basic-black);
   text-decoration: none;
 }
 
+
 /* Main */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 
 .container h1 {
   font-size: 21px;
@@ -85,34 +97,34 @@
 
 .advantages-list {
   background-color: var(--basic-sky-blue-1);
-  color: var(--basic-white)
+  color: var(--basic-white);
+  text-align: center;
 }
 
 .advantages h3 {
   font-size: 21px;
   line-height: 21px;
+  text-align: center;
 }
 .advantages p {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
 }
-.advantages ul  {
+.advantages-items ul {
   list-style: none;
+  text-align: center;
 }
-.advantages h4 {
+.advantages-items h4 {
   font-size: 21px;
   line-height: 21px;
 }
 
-.advantages-item p{
+.advantages-items p{
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-dark);
-}
-.advantages-item {
-  text-align: center;
 }
 
 /* Features */
@@ -138,39 +150,63 @@
 .appointment-info h2 {
   font-size: 30px;
   line-height: 24px;
+  font-style: normal;
+  font-weight: 700;
   text-align: center;
+  width: 297px;
+  height: 24px;
+  margin-left: 446px;
   color: var(--basic-black);
 }
+
 .appointment-info p {
-  font-size: 30px;
+  font-size: 14px;
   line-height: 24px;
+  font-style: normal;
+  font-weight: 400;
   text-align: center;
+  margin-left: 383px;
+  width: 435px;
+  height: 95px;
 }
 
-.appointment h2 {
+.hotel-search {
   background-color: var(--basic-light-brown);
-  color: var(--basic-white);
-  font-size: 21px;
-  line-height: 26px;
+  width: 568px;
+  height: 86px;
+  margin-left: 316px;
+  padding-top: 30px;
 }
-.appointment h2:hover {
+
+.hotel-search:hover {
   background-color: var(--basic-brown);
 }
-.appointment h2:active {
+.hotel-search:active {
   background-color: var(--basic-dark-brown);
 }
 
-.button {
-  background-color: var(--basic-sky-blue);
+.hotel-search h2 {
   color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
+  font-style: normal;
+  font-weight: bold;
 }
-.button:hover {
-  background-color: var(--basic-blue);
+
+.appointment {
+  background: #FFFFFF;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  width: 568px;
+  min-height: 395px;
+  margin-left: 315px;
 }
-.button:active {
-  background-color: var(--basic-dark-blue);
+
+.appointment-date {
+  margin-left: 55px;
+}
+
+.appointment-age {
+  margin-left: 55px;
 }
 
 .appointment-date input:hover {
@@ -181,24 +217,57 @@
   border: 2px solid var(--basic-gray);
 }
 
+.button {
+  background-color: var(--basic-sky-blue);
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  width: 458px;
+  height: 58px;
+  margin-left: 55px;
+}
+
+.button:hover {
+  background-color: var(--basic-blue);
+}
+.button:active {
+  background-color: var(--basic-dark-blue);
+}
+
 
 /* Main-Footer */
 
 .contact {
   font-size: 21px;
   line-height: 26px;
+  justify-self: center;
+  width: 251px;
+  margin-top: 23px;
 }
+
 .contact a {
   color: var(--basic-black);
   text-decoration: none;
 }
+
 .contact p {
   color: var(--basic-black);
   text-decoration: none;
 }
 
+.footer-social {
+  width: 150px;
+  justify-self: center;
+}
+
 .footer-social ul {
   list-style: none;
+}
+
+.footer-copyright {
+  justify-self: center;
+  width: 195px;
+  margin-top: 38px;
 }
 
 .footer-copyright a {
@@ -231,6 +300,7 @@
 .sorting li {
   list-style: none;
 }
+
 .sorting a{
   color: var(--basic-black);
 }
@@ -276,6 +346,7 @@
   color: var(--basic-white);
   text-decoration: none;
 }
+
 .link-order:hover {
   background-color: var(--basic-brown);
 }
@@ -286,3 +357,54 @@
 .rating {
   background-color: var(--basic-light-gray);
 }
+
+/* Grid-Header */
+
+.main-nav{
+  display: grid;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 1200px;
+}
+
+.page {
+  height: 100%;
+}
+
+.main-header-logo {
+  justify-self: center;
+}
+
+/*Grid-Main*/
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+.advantages-items ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 120px;
+  margin: 60px 70px;
+  padding: 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 120px;
+  margin-top: 0;
+  padding: 25px;
+}
+
+/* Grid-Footer*/
+
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 1200px;
+  margin: 0 auto;
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -18,12 +18,14 @@
       <a class="main-header-logo">
         <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
       </a>
-      <ul class="site-nav">
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
-      </ul>
+      <div class="main-header-bar">
+        <ul class="site-nav">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -31,40 +33,50 @@
 
     <h1>Седона-небольшой городок в Аризоне, заслуживающий большего!</h1>
     <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
+
     <section class="advantages">
       <div class="advantages-list">
+
         <h3>Настоящий городок</h3>
         <p>-№1-</p>
         <p>Седона-не аттракцион для туристов, там течет своя жизнь</p>
-        <img src="img/image1.jpg" width="800" height="256" alt="Картинка города">
+
+        <div class="img">
+          <img src="img/image1.jpg" alt="Картинка города">
+        </div>
+
       </div>
+    </section>
+
+    <section class="advantages-items">
       <ul>
         <li>
-          <div class="advantages-item">
-            <h4>Жилье</h4>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-          </div>
+          <h4>Жилье</h4>
+          <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         <li>
-          <div class="advantages-item">
-            <h4>Еда</h4>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-          </div>
+          <h4>Еда</h4>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
         </li>
         <li>
-          <div class="advantages-item">
-            <h4>Сувениры</h4>
-            <p>Не только китайского, но и местного производства!</p>
-          </div>
+          <h4>Сувениры</h4>
+          <p>Не только китайского, но и местного производства!</p>
       </ul>
     </section>
+
     <section class="advantages">
       <div class="advantages-list">
+
         <h3>Там есть мост дьявола</h3>
         <p>-№2-</p>
         <p>Да,по нему можно пройти! Если конечно вы осмелитесь</p>
-        <img src="img/image2.jpg" width="800" height="256" alt="Картнка гор">
+
+        <div class="img">
+          <img src="img/image2.jpg" alt="Картнка гор">
+        </div>
+
       </div>
     </section>
+
     <section class="features">
       <div>
         <h4>Небольшая площадь</h4>
@@ -82,50 +94,61 @@
         <p>Большинство едет в Гранд Каньон и толпится там</p>
       </div>
     </section>
+
     <section class="appointment-info">
       <h2>Заинтересовались?</h2>
-      <p>Укажите предпологаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p>Укажите предпологаемые даты поездки,<br>
+        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     </section>
-    <div class="appointment">
+
+    <div class="hotel-search">
       <h2>Поиск гостиницы в Седоне</h2>
     </div>
-    <form action="https:/echo.htmlacademy.ru" method="get">
-      <p>
-      <div class="appointment-date">
-        <label for="arrival-date">Дата заезда</label>
-        <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
-      </div>
-      </p>
-      <p>
-      <div class="appointment-date">
-        <label for="departure-date">Дата выезда</label>
-        <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
-      </div>
-      </p>
-      <p>
-      <div class="appointment-age">
-        <label for="adults">Взрослые</label>
-        <button type="button">-</button>
-        <input id="adults" name="adults" placeholder="2">
-        <button type="button">+</button>
-      </div>
-      </p>
-      <p>
-      <div class="appointment-age">
-        <label for="kids">Дети</label>
-        <button type="button">-</button>
-        <input id="kids" name="kids" placeholder="0">
-        <button type="button">+</button>
-      </div>
-      </p>
-      <p>
-        <button class="button" type="submit">Найти</button>
-      </p>
-    </form>
+
+    <section class="appointment">
+      <form action="https:/echo.htmlacademy.ru" method="get">
+        <p>
+        <div class="appointment-date">
+          <label for="arrival-date">Дата заезда</label>
+          <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
+        </div>
+        </p>
+
+        <p>
+        <div class="appointment-date">
+          <label for="departure-date">Дата выезда</label>
+          <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
+        </div>
+        </p>
+
+        <p>
+        <div class="appointment-age">
+          <label for="adults">Взрослые</label>
+          <button type="button">-</button>
+          <input id="adults" name="adults" placeholder="2">
+          <button type="button">+</button>
+        </div>
+        </p>
+
+        <p>
+        <div class="appointment-age">
+          <label for="kids">Дети</label>
+          <button type="button">-</button>
+          <input id="kids" name="kids" placeholder="0">
+          <button type="button">+</button>
+        </div>
+        </p>
+
+        <p>
+          <button class="button" type="submit">Найти</button>
+        </p>
+
+      </form>
     </section>
   </main>
 
-  <footer>
+  <footer class="main-footer">
+
     <section class="contact">
       <a href="#">
         #visitsedona
@@ -134,6 +157,7 @@
         Тел. <a href="tel:+74956660166">+7(495)666-01-66</a>
       </p>
     </section>
+
     <section class="footer-social">
       <ul>
         <li>
@@ -147,10 +171,12 @@
         </li>
       </ul>
     </section>
+
     <section class="footer-copyright">
       Website by<a href="https://htmlacademy.ru">
         <img src="img/logo-htmlacademy.png" width="115" height="41" alt="Логотип htmlacademy"></a>
     </section>
+
   </footer>
 </body>
 
