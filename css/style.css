@@ -435,7 +435,6 @@
 .hotels {
   display: grid;
   grid-template-columns: 210px 1fr 185px;
-  grid-template-rows: 75px 75px;
   padding: 30px;
 }
 
@@ -453,7 +452,6 @@
 .result-bar {
   display: grid;
   grid-template-columns: 210px 1fr;
-  grid-template-rows: 90px;
   padding-left: 30px;
   margin-top: 30px;
 }
