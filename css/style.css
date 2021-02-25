@@ -210,15 +210,8 @@
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   width: 568px;
   min-height: 395px;
-  margin-left: 315px;
-}
-
-.appointment-date {
-  margin-left: 55px;
-}
-
-.appointment-age {
-  margin-left: 55px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .appointment-date input:hover {
@@ -236,7 +229,7 @@
   line-height: 26px;
   width: 458px;
   height: 58px;
-  margin-left: 55px;
+  margin-left: 0 auto;
 }
 
 .button:hover {
@@ -456,4 +449,50 @@
   margin-top: 30px;
 }
 
+/* Flex */
 
+.appointment {
+  display: flex;
+  padding: 55px;
+}
+
+.appointment-date {
+  margin-bottom: 41px;
+  margin-right: 55px;
+}
+
+.appointment-age {
+  display: flex;
+  margin-bottom: 41px;
+  margin-right: 55px;
+}
+
+
+
+
+/* outlines and other */
+/* .appointment {
+  outline: 2px solid rgba(0, 255, 255, 0.3);
+}
+.appointment-date {
+  outline: 2px solid rgba(255, 0, 0, 0.3);
+}
+.appointment-age {
+  outline: 2px solid rgba(255, 0, 255, 0.3);
+}
+.quantity {
+  outline: 2px solid rgb(255, 0, 0);
+}
+.quantity {
+  width: 114px;
+  height: 38px;
+  margin-left: 11px;
+  background-color: var(--basic-light-gray);
+  display: flex;
+
+}
+.quantity input {
+  width: 36px;
+  height: 26px;
+  align-self: center;
+} */
