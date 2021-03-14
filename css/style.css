@@ -59,11 +59,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 15px 72px;
 }
 
 .site-nav a:hover {
   color: var(--basic-sky-blue);
 }
+
 .site-nav a:active {
   color: var(--basic-neutral);
 }
@@ -77,7 +85,33 @@
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+          box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.main-header-logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+}
+
+.site-nav li:nth-child(3) {
+  margin-left: auto;
+}
+
+.site-nav li:nth-child(1),
+.site-nav li:nth-child(2) {
+  text-align: left;
+  padding-right: 138px;
+}
+
+.site-nav li:nth-child(3),
+.site-nav li:nth-child(4) {
+  text-align: right;
+  padding-left: 148px;
 }
 
 /* Main */
@@ -90,7 +124,8 @@
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+          box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
 .container h1 {
@@ -106,43 +141,48 @@
   text-align: center;
 }
 
-.background-photo::before {
-  content: "";
-  background-image: url(../img/welcome\ to\ sedona.svg);
-  width: 457px;
-  height: 351px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin: 0 auto;
+.welcome {
+  padding-top: 77px;
 }
 
 .intro-photo {
-  height: 509px;
+  position: relative;
+  width: 1200px;
+  min-height: 509px;
+  background: url(../img/background\ photo.jpg) no-repeat;
 }
 
-.welcome {
+.intro-photo::after {
+  content: "";
+  width: 100%;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 132.35px;
+  height: 57px;
+  background: url(../img/Shape.svg) no-repeat;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .intro h1 {
-  max-width: 470px;
+  width: 470px;
   margin: 0 auto;
   margin-top: 42.5px;
-  margin-bottom: 16.5px;
+  margin-bottom: 42.5px;
 }
 
 .intro h2 {
   max-width: 519px;
   margin: 0 auto;
-  margin-bottom: 51px;
+  margin-bottom: 52px;
 }
 
 /* Advantages */
 
 .advantages-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
   background-color: var(--basic-sky-blue-1);
   color: var(--basic-white);
   text-align: center;
@@ -152,7 +192,7 @@
   font-size: 21px;
   line-height: 21px;
   text-align: center;
-  max-width: 154px;
+  max-width: 150px;
   min-height: 43px;
   margin: 0 auto;
   margin-top: 47px;
@@ -163,7 +203,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  max-width: 297px;
+  max-width: 305px;
   margin: 0 auto;
 }
 
@@ -171,16 +211,21 @@
   margin-top: 23px;
 }
 
-.img:last-child {
+.img {
   width: 800px;
   height: 256px;
-  order: -1;
+}
+
+.img1 {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .advantages-items {
   margin: 0px;
   padding-top: 45px;
-  padding-bottom: 55px;
+  padding-bottom: 66px;
 }
 
 .advantages-items li {
@@ -189,18 +234,22 @@
 }
 
 .advantages-items li:first-child {
-  margin-left: 35px;
+  margin-left: 27px;
   margin-right: 120px;
   width: 270px;
 }
 
 .advantages-items li:last-child {
-  margin-right: 65px;
+  margin-right: 62px;
   margin-left: 118px;
   width: 280px;
 }
 
 .advantages-items ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
   text-align: center;
 }
@@ -210,11 +259,18 @@
   line-height: 21px;
 }
 
+.souvenirs h4 {
+  margin-top: 26px;
+  margin-bottom: 23px;
+}
+
 .advantages-items p{
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-dark);
+  padding: 0;
+  margin: 0;
 }
 
 .housing::before {
@@ -255,12 +311,18 @@
 .features {
   background-color: var(--basic-neutral);
   text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .features h4 {
   font-size: 21px;
   line-height: 21px;
   margin: 0px;
+  max-width: 120px;
+  margin-left: 140px;
 }
 
 .features p {
@@ -310,10 +372,10 @@
   text-align: center;
   width: 297px;
   height: 24px;
-  margin-left: 446px;
   color: var(--basic-black);
-  margin-top: 0px;
+  margin: 0 auto;
   padding-top: 58px;
+  padding-bottom: 32px;
 }
 
 .appointment-info p {
@@ -322,17 +384,17 @@
   font-style: normal;
   font-weight: 400;
   text-align: center;
-  margin-left: 383px;
-  width: 435px;
+  width: 450px;
   height: 95px;
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .hotel-search {
   background-color: var(--basic-light-brown);
   width: 568px;
-  height: 86px;
-  margin-left: 316px;
-  padding-top: 30px;
+  margin: 0 auto;
 }
 
 .hotel-search:hover {
@@ -353,20 +415,34 @@
   line-height: 26px;
   font-style: normal;
   font-weight: bold;
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .appointment {
   background: #FFFFFF;
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+          box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   width: 568px;
-  min-height: 395px;
+  height: 395px;
   margin: 0 auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 78px;
+}
+
+.sedona-map {
+  position: absolute;
+  /* z-index: 1; */
 }
 
 .appointment-date {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin-bottom: 29px;
+  max-height: 38px;
+  padding-bottom: 25px;
 }
 
 .appointment-date:first-child {
@@ -375,11 +451,13 @@
 
 .appointment-age {
   margin-right: 53px;
+  max-height: 38px;
+  padding-top: 10px;
 }
 
 .appointment-date input {
-  width: 303px;
-  height: 38px;
+  width: 298px;
+  height: 36px;
   border: none;
   padding-left: 12px;
   background-color: var(--basic-light-gray);
@@ -389,6 +467,7 @@
 .calendar {
   border: none;
   background-color: var(--basic-light-gray);
+  height: 38px;
 }
 
 .calendar:hover {
@@ -408,12 +487,22 @@
 }
 
 .appointment-form {
+  position: absolute;
+  width: 513px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-left: 55px;
+  background-color: var(--basic-white);
+  padding-bottom: 50px;
+
 }
 
 .appointment-age {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-right: 10px;
   margin: 0px;
@@ -421,12 +510,14 @@
 
 .appointment-date label {
   width: 112px;
+  height: 38px;
   text-align: left;
   padding-top: 6px;
 }
 
 .appointment-age label {
-  width: 112px;
+  width: 108px;
+  height: 38px;
   text-align: left;
   padding-top: 6px;
 }
@@ -441,11 +532,12 @@
   color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
-  width: 462px;
+  text-transform: uppercase;
+  width: 460px;
   height: 58px;
   margin-left: 0 auto;
-  margin-top: 54px;
   border: none;
+  margin-top: 54px;
 }
 
 .appointment-date input:hover {
@@ -472,17 +564,17 @@
 }
 
 .quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-}
-
-.quantity {
   width: 114px;
   height: 38px;
 }
 
 .quantity input {
   width: 36px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   background-color: var(--basic-light-gray);
   text-align: center;
@@ -491,7 +583,8 @@
 
 .quantity button {
   width: 39px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   background-color: var(--basic-light-gray);
 }
@@ -513,8 +606,11 @@
 /* Main-Footer */
 
 .main-footer {
+  width: 1200px;
+  min-height: 120px;
   background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+          box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
   opacity: 0.9;
 }
 
@@ -534,12 +630,19 @@
 .contact p {
   color: var(--basic-black);
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 46px;
   height: 48px;
   background-color: var(--basic-sky-blue);
@@ -547,9 +650,14 @@
 }
 
 .footer-social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 152px;
   margin: 0 auto;
   padding: 0;
@@ -570,6 +678,8 @@
 }
 
 .footer-copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 38px;
   padding-left: 66px;
@@ -604,6 +714,8 @@
 
 .filters {
   height: 218px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-image: url(../img/background-catalog.png);
   background-repeat: no-repeat;
@@ -663,14 +775,14 @@
   font-weight: normal;
   text-align: left;
   margin-left: 72px;
-  padding-bottom: 23px;
+  padding-bottom: 17px;
 }
 
 .checkboxes:nth-child(2) li {
   font-weight: normal;
   text-align: left;
   margin-left: 42px;
-  padding-bottom: 23px;
+  padding-bottom: 17px;
 }
 
 .visually-hidden {
@@ -700,8 +812,12 @@
   height: 30px;
   border: 2px solid white;
   border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 10.5px;
 }
 
@@ -729,7 +845,9 @@
   width: 2px;
   height: 22px;
   background: #ffffff;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .range-controls {
@@ -798,9 +916,12 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 7px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 4px;
   padding-bottom: 7px;
 }
 
@@ -886,17 +1007,17 @@
 }
 
 .link-show {
-    display: inline-block;
-    width: 77px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 21px;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    padding: 3px 16px;
-    background-color: var(--basic-sky-blue);
-    color: var(--basic-white);
+  display: inline-block;
+  width: 77px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  padding: 3px 16px;
+  background-color: var(--basic-sky-blue);
+  color: var(--basic-white);
 }
 
 .link-order {
@@ -932,11 +1053,11 @@
 .link-order:hover{
   background-color: var(--basic-brown);
 }
+
 .link-order:active {
   background-color: var(--basic-dark-brown);
   color: rgba(255, 255, 255, 0.3);
 }
-
 
 .rating {
   background-color: var(--basic-light-gray);
@@ -946,28 +1067,12 @@
   font-weight: 400;
 }
 
-/*Grid-Main*/
-
-.advantages-list {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}
-
-
-.advantages-items ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 /* Grid-Footer*/
 
 .main-footer {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   width: 1200px;
   margin: 0 auto;
@@ -976,53 +1081,28 @@
 /* Grid-Catalog-Main*/
 
 .search {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 250px 250px 1fr;
   grid-template-columns: 250px 250px 1fr;
   padding-left: 30px;
 }
 
 .search-price {
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
   padding-right: 75px;
-}
-
-/* Flex-Header */
-
-.main-header-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.site-nav {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 15px 72px;
-}
-
-.site-nav li:nth-child(3) {
-  margin-left: auto;
-}
-
-.site-nav li:nth-child(1),
-.site-nav li:nth-child(2) {
-  text-align: left;
-  padding-right: 133px;
-}
-
-.site-nav li:nth-child(3),
-.site-nav li:nth-child(4) {
-  text-align: right;
-  padding-left: 147px;
 }
 
 /* Flex-Catalog */
 
 .result-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 31px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-bottom: 25px;
   padding-top: 29px;
   padding-left: 73px;
 }
@@ -1034,9 +1114,11 @@
 .hotels {
   border-top: 1px solid var(--basic-gray);
   max-height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 35px;
   padding-left: 73px;
   padding-right: 70px;
   text-align: left;
@@ -1058,41 +1140,37 @@
   margin-left: 30px;
 }
 
-.test {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 26px;
-  margin-bottom: 7px;
-}
-
 .hotel-text-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 183px;
   margin-top: 7px;
 }
 
 .stars {
   max-width: 125px;
   height: 17px;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   text-align: right;
-  margin-bottom: 47px;
+  margin-bottom: 39px;
 }
 
 .rating {
   max-width: 110px;
   height: 27px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-left: 15px;
+  padding-right: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .hotel-quality {
   margin-left: auto;
 }
-
-
-
-
-
-
-
-  /* outline: 2px solid rgba(255, 0, 255, 0.967); */
-

@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favicon152.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/apple-favicon.png">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="main-body">
@@ -28,8 +28,8 @@
   </header>
 
   <main class="container">
+
     <div class="intro-photo">
-      <img class="background-photo" src="img/background photo.jpg" alt="Главный фон">
       <img class="welcome" src="img/welcome to sedona.svg" alt="Добро пожаловать">
     </div>
 
@@ -42,7 +42,7 @@
       <div class="advantages-list">
         <div>
           <h3>Настоящий городок</h3>
-          <p>-№1-</p>
+          <p>- №1 -</p>
           <p>Седона-не аттракцион для туристов, там течет своя жизнь</p>
         </div>
 
@@ -56,7 +56,7 @@
     <section class="advantages-items">
       <ul>
         <li class="housing">
-          <h4>Жилье</h4>
+          <h4>Жильё</h4>
           <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
         <li class="food">
           <h4>Еда</h4>
@@ -72,12 +72,12 @@
       <div class="advantages-list">
 
         <div>
-          <h3>Там есть мост дьявола</h3>
-          <p>-№2-</p>
+          <h3>Там есть<br>мост дьявола</h3>
+          <p>- №2 -</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
 
-        <div class="img">
+        <div class="img img1">
           <img src="img/image2.jpg" alt="Картнка гор">
         </div>
 
@@ -102,23 +102,29 @@
       </div>
     </section>
 
-    <section class="appointment-info">
+    <div class="appointment-info">
       <h2>Заинтересовались?</h2>
       <p>Укажите предпологаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-    </section>
+    </div>
 
     <div class="hotel-search">
       <h2>Поиск гостиницы в Седоне</h2>
     </div>
 
-    <section class="appointment">
+    <section class="sedona-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419425.0058637825!2d-111.77316651369811!3d34.78687063463441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2spl!4v1615543775689!5m2!1sru!2spl"
+        width="1200" height="585" style="border:0;" allowfullscreen="" loading="lazy"
+        title="Sedona, Аризона, США"></iframe>
+    </section>
 
+    <section class="appointment">
       <form class="appointment-form" action="https:/echo.htmlacademy.ru" method="POST">
 
         <div class="appointment-date">
           <label for="arrival-date">Дата заезда:</label>
-          <input id="arrival-date" type="text" name="date" placeholder="24 апреля 2017">
+          <input id="arrival-date" type="text" name="date" placeholder="24 АПРЕЛЯ 2017">
           <button class="calendar">
             <svg width="21" height="23" viewBox="0 0 21 23" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -133,7 +139,7 @@
 
         <div class="appointment-date">
           <label for="departure-date">Дата выезда:</label>
-          <input id="departure-date" type="text" name="date" placeholder="4 июля 2017">
+          <input id="departure-date" type="text" name="date" placeholder="4 ИЮЛЯ 2017">
           <button class="calendar">
             <svg width="21" height="23" viewBox="0 0 21 23" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -168,6 +174,7 @@
 
       </form>
     </section>
+
   </main>
 
   <footer class="main-footer">
