@@ -152,7 +152,7 @@
   position: relative;
   width: 1200px;
   min-height: 509px;
-  background: url(../img/background\ photo.jpg) no-repeat;
+  background: url(../img/background-photo.jpg) no-repeat;
   background-color: var(--basic-sky-blue);
 }
 
@@ -161,7 +161,7 @@
   width: 100%;
   position: absolute;
   height: 57px;
-  background: url(../img/Shape.svg) no-repeat;
+  background: url(../img/shape.svg) no-repeat;
   left: 0;
   bottom: 0;
   z-index: 1;
@@ -830,6 +830,7 @@
 
 .price-amount label {
   display: inline-block;
+  vertical-align: middle;
   width: 162px;
   color: #ffffff;
   text-align: center;
@@ -1017,6 +1018,7 @@
 
 .link-show {
   display: inline-block;
+  vertical-align: middle;
   width: 77px;
   font-size: 14px;
   font-weight: 700;
@@ -1031,6 +1033,7 @@
 
 .link-order {
   display: inline-block;
+  vertical-align: middle;
   font-weight: 700;
   line-height: 21px;
   text-transform: uppercase;
